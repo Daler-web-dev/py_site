@@ -7,7 +7,6 @@ import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
 	return [{ locale: "ru" }, { locale: "ru" }]
-
 }
 
 const inter = Montserrat({ subsets: ["latin"] });
