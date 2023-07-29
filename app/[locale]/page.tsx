@@ -23,13 +23,13 @@ export default function Home() {
 				<div className="flex items-center gap-2">
 					<span className="py-0 font-light opacity-50">{t("socMedia")}:</span>
 					<nav className="flex items-center gap-6">
-						<Link href={""}>
+						<Link href={"/"}>
 							<FaFacebookF size="20" color="black" />
 						</Link>
-						<Link href={""}>
+						<Link href={"/"}>
 							<BsInstagram size="20" color="black" />
 						</Link>
-						<Link href={""}>
+						<Link href={"/"}>
 							<Image
 								src="/vk.svg"
 								alt=""
@@ -37,10 +37,10 @@ export default function Home() {
 								height="30"
 							/>
 						</Link>
-						<Link href={""}>
+						<Link href={"/"}>
 							<BsYoutube size="20" color="black" />
 						</Link>
-						<Link href={""}>
+						<Link href={"/"}>
 							<FaTelegramPlane size="20" color="black" />
 						</Link>
 					</nav>
