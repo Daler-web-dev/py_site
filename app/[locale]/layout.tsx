@@ -28,7 +28,7 @@ export default async function LocaleLayout({
 	return (
 		<html lang="en">
 			<body
-				className={`${inter.className} max-w-[1440px] mx-auto my-0 max-h-[1020px] relative`}
+				className={`${inter.className} mx-auto my-0 relative`}
 			>
 				<header className="flex justify-between items-center py-4  px-4 md:px-20 w-full absolute top-0">
 					<Image
