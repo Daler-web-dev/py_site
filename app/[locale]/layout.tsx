@@ -40,9 +40,9 @@ export default async function LocaleLayout({
 					<nav className="flex items-center gap-2">
 						<Link
 							href="/uz"
-							className={`text-base py-0 ${
+							className={`text-md py-0 ${
 								locale === "uz"
-									? "font-mediaum"
+									? "font-medium"
 									: "font-extralight"
 							}`}
 						>
@@ -51,10 +51,10 @@ export default async function LocaleLayout({
 						<div className="h-[14px] w-[1px] bg-black"></div>
 						<Link
 							href="/ru"
-							className={`text-base py-0 ${
+							className={`text-md py-0 ${
 								locale === "ru"
-									? "font-mediaum"
-									: "font-extralight"
+									? "font-medium"
+									: "font-light"
 							}`}
 						>
 							RU
@@ -62,9 +62,9 @@ export default async function LocaleLayout({
 						<div className="h-[14px] w-[1px] bg-black"></div>
 						<Link
 							href="/en"
-							className={`text-base py-0 ${
+							className={`text-md py-0 ${
 								locale === "en"
-									? "font-mediaum"
+									? "font-medium"
 									: "font-extralight"
 							}`}
 						>
