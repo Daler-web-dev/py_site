@@ -6,7 +6,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export function generateStaticParams() {
-	return [{ locale: "ru" }, { locale: "en" }, { locale: "uz" }]
+	return [{ locale: "ru" }, { locale: "en" }, { locale: "uz" }];
 }
 
 const inter = Montserrat({ subsets: ["latin"] });
@@ -27,10 +27,66 @@ export default async function LocaleLayout({
 
 	return (
 		<html lang="en">
-			<body
-				className={`${inter.className} mx-auto my-0 relative`}
-			>
-				<header className="flex justify-between items-center py-4  px-4 md:px-20 w-full absolute top-0">
+			<body className={inter.className}>
+				<header>
+					<Image
+						src="/logo.svg"
+						alt="logo"
+						width="20"
+						height="20"
+						className="logo"
+					/>
+
+					<nav className="flex items-center gap-2">
+						<Link
+							href="/uz"
+							className={`text-base py-0 ${
+								locale === "uz"
+									? "font-mediaum"
+									: "font-extralight"
+							}`}
+						>
+							UZ
+						</Link>
+						<div className="h-[14px] w-[1px] bg-black"></div>
+						<Link
+							href="/ru"
+							className={`text-base py-0 ${
+								locale === "ru"
+									? "font-mediaum"
+									: "font-extralight"
+							}`}
+						>
+							RU
+						</Link>
+						<div className="h-[14px] w-[1px] bg-black"></div>
+						<Link
+							href="/en"
+							className={`text-base py-0 ${
+								locale === "en"
+									? "font-mediaum"
+									: "font-extralight"
+							}`}
+						>
+							EN
+						</Link>
+					</nav>
+					{/* <div className="lang">
+						<span className="lang-btn">UZ</span>|
+						<span className="lang-btn">RU</span>|
+						<span className="lang-btn">EN</span>
+					</div> */}
+				</header>
+				<NextIntlClientProvider locale={locale} messages={translation}>
+					{children}
+				</NextIntlClientProvider>
+				<footer>
+					<span>
+						ⓒ 1991 - 2023, «PARVIZ YAKHYAYEV», ВСЕ ПРАВА ЗАЩИЩЕНЫ.{" "}
+					</span>
+				</footer>
+
+				{/* <header className="flex justify-between items-center py-4  px-4 md:px-20 w-full absolute top-0">
 					<Image
 						src="/logo.svg"
 						alt=""
@@ -72,15 +128,13 @@ export default async function LocaleLayout({
 							EN
 						</Link>
 					</nav>
-				</header>
-				<NextIntlClientProvider locale={locale} messages={translation}>
-					{children}
-				</NextIntlClientProvider>
-				<footer className="flex justify-between items-center py-4 px-4 md:px-20 w-full md:absolute bottom-0">
+				</header> */}
+
+				{/* <footer className="flex justify-between items-center py-4 px-4 md:px-20 w-full md:absolute bottom-0">
 					<span className="py-0 font-light opacity-50 text-sm ">
 						ⓒ 1991 - 2023, «PARVIZ YAKHYAYEV», ВСЕ ПРАВА ЗАЩИЩЕНЫ.
 					</span>
-				</footer>
+				</footer> */}
 			</body>
 		</html>
 	);
