@@ -216,6 +216,9 @@ footer span {
 }
 
 @media all and (max-width: 634px) {
+    body {
+        padding: 20px  !important;
+    }
 	.poster {
 		height: 45vh;
 	}
@@ -252,9 +255,6 @@ footer span {
 }
 
 @media all and (max-width: 425px) {
-    body {
-        padding: 10px  !important;
-    }
 	.poster {
 		height: 37vh;
 		top: 5vh;
