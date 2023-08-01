@@ -29,6 +29,10 @@ export default async function LocaleLayout({
 		<html lang="en">
 			<head>
 				<title>{translation?.Index?.head?.title}</title>
+				<meta
+					name="description"
+					content={translation?.Index?.description}
+				/>
 				<link rel="icon" href="images/favicon.ico" />
 			</head>
 			<body className={inter.className}>
@@ -56,9 +60,7 @@ export default async function LocaleLayout({
 						<Link
 							href="/ru"
 							className={`text-md py-0 ${
-								locale === "ru"
-									? "font-medium"
-									: "font-light"
+								locale === "ru" ? "font-medium" : "font-light"
 							}`}
 						>
 							RU
