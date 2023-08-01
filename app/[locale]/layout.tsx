@@ -28,6 +28,7 @@ export default async function LocaleLayout({
 	return (
 		<html lang="en">
 			<head>
+				<title>{translation?.Index?.head?.title}</title>
 				<link rel="icon" href="images/favicon.ico" />
 			</head>
 			<body className={inter.className}>
