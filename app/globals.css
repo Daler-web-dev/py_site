@@ -20,6 +20,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	position: relative;
 	padding: 2vh 9vh;
 	height: 100vh;
 	font-size: 2vh;
@@ -195,7 +196,7 @@ footer span {
 	}
 	.wrapper {
 		padding-top: 60vh;
-		display: block;
+		/* display: block; */
 	}
 	.wrapper b {
 		font-size: 3.2vh;
@@ -216,133 +217,92 @@ footer span {
 }
 
 @media all and (max-width: 634px) {
-    body {
-        padding: 20px  !important;
-    }
-	.poster {
-		height: 45vh;
+	body {
+		padding: 20px;
 	}
+	.poster {
+		height: 100vh;
+		object-fit: cover;
+	}
+	.wrapper {
+		color: white;
+		height: auto;
+		display: flex;
+		padding-top: 60vh;
+	}
+	.wrapper b {
+		display: block;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px !important; 
+	}
+	.wrapper h1 {
+		font-size: 30px;
+		font-weight: 500;
+	}
+	.wrapper h3 {
+		max-width: 85ch;
+		font-size: 2.5vh;
+		margin: 2vh 0 2vh;
+		font-weight: 400;
+	}
+	.wrapper .social nav svg {
+		filter: invert(100%);
+		width: wvh;
+		height: 2vh;
+	}
+	.wrapper .social {
+		font-size: 1.4vh;
+	}
+	footer span {
+		font-size: 1.4vh;
+	}
+}
+
+@media all and (max-width: 555px) {
+	.wrapper {
+		padding-top: 50vh;
+	}
+}
+@media all and (max-width: 500px) {
 	.wrapper {
 		padding-top: 45vh;
-		display: block;
 	}
 	.wrapper b {
-		font-size: 3vh;
-		font-weight: 440;
+		/* font-size: 2.5vh; */
+		font-weight: 500;
 	}
 	.wrapper h1 {
-		font-size: 5vh;
-		font-weight: 450;
-	}
-	.wrapper .social {
-		font-size: 2vh;
-	}
-	footer span {
-		font-size: 2vh;
-	}
-	.wrapper .social {
-		padding-bottom: 3vh;
+		/* font-size: 4.5vh; */
+		/* font-weight: 600; */
 	}
 	.wrapper h3 {
-		max-width: 85ch;
-		font-size: 2vh;
-		margin: 3vh 0 3vh;
-		font-weight: 400;
-	}
-	header .logo {
-		width: 5vh;
-	}
-}
-
-@media all and (max-width: 425px) {
-	.poster {
-		height: 37vh;
-		top: 5vh;
-	}
-	.wrapper {
-		padding-top: 30vh;
-	}
-	.wrapper b {
 		font-size: 2.5vh;
-		font-weight: 440;
-	}
-
-	.wrapper h1 {
-		font-size: 4.1vh;
-		font-weight: 430;
-	}
-	.wrapper .social {
-		font-size: 1.5vh;
-	}
-	footer span {
-		font-size: 1.4vh;
-	}
-	.wrapper h3 {
-		max-width: 85ch;
-		font-size: 2vh;
-		margin: 3vh 0 3vh;
+		margin: 2vh 0 2vh;
 		font-weight: 400;
 	}
-	.wrapper .social nav svg {
-		margin-right: 2vh;
-		width: 2.5vh;
-		height: 2.5vh;
-	}
-	header .logo {
-		width: 4vh;
-	}
 }
-
-@media all and (max-width: 394px) {
-	.poster {
-		height: 30vh;
-		top: 5vh;
-	}
+@media all and (max-width: 400px) {
 	.wrapper {
-		padding-top: 25vh;
+		padding-top: 45vh;
 	}
 	.wrapper b {
-		font-size: 2.2vh;
-		font-weight: 440;
+		/* font-size: 2.1vh; */
 	}
 	.wrapper h1 {
-		font-size: 3.8vh;
-		font-weight: 430;
+		/* font-size: 3.5vh; */
 	}
-	.wrapper .social {
-		font-size: 1.5vh;
-	}
-	footer span {
-		font-size: 1.4vh;
-	}
+
 	.wrapper h3 {
-		max-width: 85ch;
-		font-size: 2vh;
-		margin: 3vh 0 3vh;
+		font-size: 1.7vh;
+		margin: 2vh 0 2vh;
 		font-weight: 400;
 	}
-	.wrapper .social nav svg {
-		margin-right: 2vh;
-		width: 2.5vh;
-		height: 2.5vh;
-	}
-	header .logo {
-		width: 3.5vh;
-	}
-}
-@media all and (max-width: 310px) {
-	.poster {
-		height: 27vh;
-	}
-	.wrapper b {
-		font-size: 2.2vh;
-	}
-	.wrapper h1 {
-		font-size: 3.5vh;
+	footer span {
+		font-size: 1.2vh;
 	}
 	.wrapper .social nav svg {
-		margin-right: 2vh;
-		width: 2.1vh;
-		height: 2.1vh;
+		width: 1.8vh;
+		height: 1.8vh;
 	}
 }

@@ -92,7 +92,6 @@ export default function Home() {
 					</Link>
 				</nav>
 			</div>
-			<img src="/person.png" className="poster" />
 		</div>
 		// <main classNameName="px-4 md:px-20 h-full md:h-screen flex flex-col-reverse gap-5 justify-end laptop:flex-row  laptop:justify-between items-center pt-[50px] laptop:pb-[0px] pb-[50px] overflow-hidden">
 		// 	<div classNameName="flex flex-col gap-6 items-start w-full">
